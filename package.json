@@ -2,8 +2,9 @@
   "name": "lox-syntax-highlight",
   "displayName": "Lox Syntax Highlight",
   "description": "Syntax highlighting for Lox.",
+  "icon": "assets/icon.png",
   "publisher": "zsoltkebel",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.76.0"
   },

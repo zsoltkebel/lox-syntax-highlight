@@ -10,6 +10,14 @@ This extension adds syntax highlight for the Lox language.
 
 ## Release Notes
 
+### 0.0.3
+
+Added icon.
+
+### 0.0.2
+
+Added example video to description.
+
 ### 0.0.1
 
 Quick release of the first working version with limited syntax highlight.
