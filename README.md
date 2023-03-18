@@ -2,6 +2,8 @@
 
 This extension adds syntax highlight for the Lox language.
 
+![Example video](/assets/example.gif)
+
 ## Known Issues
 
 - Classes and methods are not highlighted yet.
