@@ -1,0 +1,121 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Lox",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#statements"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#digits"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.lox",
+					"match": "\\/\\/.*"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.lox",
+					"match": "\\b(if|else|while|for|return|and|or)\\b"
+				},
+				{
+					"name": "support.function.builtin.lox",
+					"match": "\\b(print)\\b"
+				}
+			]
+		},
+		"statements": {
+			"patterns": [
+				{
+					"match": "\\b(var)\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
+					"captures": {
+						"1": {
+							"name": "storage.type.lox"
+						},
+						"2": {
+							"name": "support.variable.lox"
+						}
+					}
+				},
+				{
+					"match": "\\b(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9,\\s]*)\\)",
+					"captures": {
+						"1": {
+							"name":"storage.type.function.lox"
+						},
+						"2": {
+							"name":"entity.name.function.lox"
+						},
+						"3": {
+							"patterns": [
+								{
+									"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+									"name": "variable.parameter.lox"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"identifiers": {
+			"patterns": [
+				{
+					"name": "variable.name.lox",
+					"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.lox",
+			"begin": "\"",
+			"end": "\""
+		},
+		"digits": {
+			"patterns": [
+				{
+					"name": "constant.numeric.lox",
+					"match": "\\b[0-9]+(?:.[0-9]+)?\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [				
+				{
+					"match": "(==|!=|<=?|>=?)",
+					"name": "keyword.operator.comparison.lox"
+				},
+				{
+					"match": "=",
+					"name": "keyword.operator.assignment.lox"
+				},
+				{
+					"match": "(\\+|\\-|\\*|\\/)",
+					"name": "keyword.operator.arithmetic.lox"
+				}
+			]
+		}
+	},
+	"scopeName": "source.lox"
+}

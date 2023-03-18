@@ -1,0 +1,25 @@
+{
+  "name": "lox-syntax-highlight",
+  "displayName": "Lox Syntax Highlight",
+  "description": "Syntax highlighting for Lox.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "lox",
+      "aliases": ["Lox", "lox"],
+      "extensions": [".lox"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "lox",
+      "scopeName": "source.lox",
+      "path": "./syntaxes/lox.tmLanguage.json"
+    }]
+  }
+}
