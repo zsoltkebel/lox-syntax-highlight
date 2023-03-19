@@ -4,7 +4,7 @@
   "description": "Syntax highlighting for Lox.",
   "icon": "assets/icon.png",
   "publisher": "zsoltkebel",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.76.0"
   },
@@ -14,6 +14,10 @@
   "contributes": {
     "languages": [{
       "id": "lox",
+      "icon": {
+        "light": "./assets/lox.svg",
+        "dark": "./assets/lox.svg"
+      },
       "aliases": ["Lox", "lox"],
       "extensions": [".lox"],
       "configuration": "./language-configuration.json"
