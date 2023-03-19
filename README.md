@@ -8,7 +8,7 @@ This extension also adds file icons for .lox files.
 
 ![Image of file icon](/assets/file-icon-example.png)
 
-![Image of file icon](/assets/lox.svg)
+![Image of file icon](/assets/lox.png)
 
 ## Known Issues
 
